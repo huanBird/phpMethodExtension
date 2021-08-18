@@ -1,0 +1,21 @@
+{
+    "name": "szmz/phpmethodextension",
+    "description": "one extension for php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "huanbird",
+            "email": "737558850@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "szmz\\phpmethodextension\\": "src/"
+        }
+    }
+}
