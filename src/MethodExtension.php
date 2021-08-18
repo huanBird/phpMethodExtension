@@ -8,4 +8,10 @@ class MethodExtension
     {
         return md5(sha1($str));
     }
+
+
+    public function trimLen($str)
+    {
+        return strlen(trim($str));
+    }
 }
