@@ -38,6 +38,3 @@ class IndexController extends AbstractController
 }
 ```
 
-## 详细文档
-
-[https://pay.yansongda.cn](https://pay.yansongda.cn)
