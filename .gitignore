@@ -1,5 +1,12 @@
+# Reference https://github.com/github/gitignore
+# OS General
+Thumbs.db
+.DS_Store
 
-/.idea
-/.vagrant
-README.md
-.htaccess
+# Project
+vendor/
+
+# Develop tools
+.vscode/
+.idea/
+*.swp
