@@ -16,6 +16,9 @@
     "autoload": {
         "psr-4": {
             "szmz\\phpmethodextension\\": "src/"
-        }
+        },
+        "files": [
+            "src/Common.php"
+        ]
     }
 }
