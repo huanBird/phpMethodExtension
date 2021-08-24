@@ -155,6 +155,20 @@ if (!function_exists('priceFormat')){
         if($show_yuan == false) return sprintf("%s", $price);
         else return sprintf("￥%s元", $price);
     }
+    // 简易UUID生成方法(非严谨版)
+    function uuid() {
+        $charid = md5(uniqid(mt_rand(), true));
+        $hyphen = chr(45);
+        $uuid = chr(123)
+               .substr($charid, 0, 8).$hyphen
+               .substr($charid, 8, 4).$hyphen
+               .substr($charid,12, 4).$hyphen
+               .substr($charid,16, 4).$hyphen
+               .substr($charid,20,12)
+               .chr(125);
+        return $uuid;
+    }
 }
+
 
 
