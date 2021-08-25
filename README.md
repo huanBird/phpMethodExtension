@@ -66,6 +66,13 @@ composer require szmz/phpmethodextension
    * @return  string
    */
   function priceFormat($price,$show_yuan = false,$type=0)
+  
+  /**
+   * 简易UUID生成
+   * @access  public
+   * @return  string
+   */
+  function uuid()
 
 ```
 
