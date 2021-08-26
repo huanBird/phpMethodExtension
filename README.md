@@ -73,6 +73,83 @@ composer require szmz/phpmethodextension
    * @return  string
    */
   function uuid()
+  
+  /**
+   * 返回经htmlspecialchars处理过的字符串或数组
+   * @param $obj 需要处理的字符串或数组
+   * @return mixed
+   */
+  function new_html_special_chars($string)
+  
+  /**
+   * 安全过滤函数
+   *
+   * @param $string
+   * @return string
+   */
+  function safe_replace($string)
+  
+  /**
+   * xss过滤函数
+   *
+   * @param $string
+   * @return string
+   */
+  function remove_xss($string)
+  
+  /**
+   * 过滤ASCII码从0-28的控制字符
+   * @return String
+   */
+  function trim_unsafe_control_chars($str)
+  
+  /**
+   * 格式化文本域内容
+   *
+   * @param $string 文本域内容
+   * @return string
+   */
+  function trim_textarea($string)
+  
+  /**
+   * 将文本格式成适合js输出的字符串
+   * @param string $string 需要处理的字符串
+   * @param intval $isjs 是否执行字符串格式化，默认为执行
+   * @return string 处理后的字符串
+   */
+  function format_js($string, $isjs = 1)
+  
+  /**
+   * 转义 javascript 代码标记
+   *
+   * @param $str
+   * @return mixed
+   */
+  function trim_script($str)
+  
+  /**
+   * 获取请求ip
+   *
+   * @return ip地址
+   */
+  function ip()
+  
+  /**
+   * 转换字节数为其他单位
+   *
+   *
+   * @param    string    $filesize    字节大小
+   * @return    string    返回大小
+   */
+  function sizecount($filesize)
+  
+  /**
+   * 取得文件扩展
+   *
+   * @param $filename 文件名
+   * @return 扩展名
+   */
+  function fileext($filename)
 
 ```
 
