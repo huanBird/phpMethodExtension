@@ -577,6 +577,31 @@ if (!function_exists('isMobile')) {
 
 
 
+if (!function_exists('getDiscount')){
+    /**
+     * 计算折扣
+     * @param  [type] $activityPrice [description]
+     * @param  [type] $marketPrice   [description]
+     * @return [type]                [description]
+     */
+    function getDiscount($activityPrice, $marketPrice, $showUnit = false)
+    {
+        if (empty($activityPrice) || empty($marketPrice)) {
+            return '';
+        }
+
+        $discount = round(bcdiv($activityPrice, $marketPrice, 10), 3) * 10;
+        if ($discount <= 0) {
+            return '';
+        }
+        return $showUnit ? $discount . '折' : $discount;
+
+    }
+}
+
+
+
+
 
 
 

@@ -196,6 +196,14 @@ composer require szmz/phpmethodextension
    */
   function isMobile()
   
+  /**
+   * 计算折扣
+   * @param  [type] $activityPrice [description]
+   * @param  [type] $marketPrice   [description]
+   * @return [type]                [description]
+   */
+  function getDiscount($activityPrice, $marketPrice, $showUnit = false)
+  
   
 
 ```
