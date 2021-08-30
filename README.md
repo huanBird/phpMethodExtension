@@ -150,6 +150,53 @@ composer require szmz/phpmethodextension
    * @return 扩展名
    */
   function fileext($filename)
+  
+  /**
+   * 隐藏手机号中间四位
+   * @param $str
+   * @return string|string[]
+   */
+  function yc_phone($str)
+  
+  /**
+   * 检查身份证是否正确
+   * @param $num_id
+   * @return bool
+   */
+  function checkIdNum($num_id)
+  
+  /**
+   * 判断是不是微信登陆
+   * @return array
+   */
+  function is_wechat_open()
+  
+  /**
+   * 生成一个包含 大写英文字母, 小写英文字母, 数字 的数组
+   * @param $length
+   * @return string
+   */
+  function random_str($length)
+  
+  /**
+   * [api_show  ]
+   * @param $status 业务状态码
+   * @param $message 信息提示
+   * @param array $data 数据
+   * @param int $httpCode http状态码
+   * @return
+   * @author [默默]
+   */
+  function api_show($status, $message, $data = [], $httpCode = 200)
+  
+  
+  /**
+   * 判断当前访问的用户是  PC端  还是 手机端  返回true 为手机端  false 为PC 端
+   * @return bool
+   */
+  function isMobile()
+  
+  
 
 ```
 
