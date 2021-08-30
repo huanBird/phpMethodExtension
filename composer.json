@@ -12,7 +12,9 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
-        "ext-mbstring": "*"
+        "ext-mbstring": "*",
+        "ext-bcmath": "*",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
