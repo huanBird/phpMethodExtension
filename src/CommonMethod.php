@@ -632,6 +632,73 @@ if (!function_exists('getDiscount')) {
 }
 
 
+if (!function_exists('xmlToArray')) {
+    /**
+     * Xml to Array
+     * @param $xml
+     * @return mixed
+     */
+    function xmlToArray($xml)
+    {
+        //禁止引用外部xml实体
+        libxml_disable_entity_loader(true);
+        $values = json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+
+        return $values;
+    }
+}
+
+if (!function_exists('arrayToXml')) {
+    /**
+     * array to xml
+     * @param $data
+     * @param bool $root
+     * @return string
+     */
+    function arrayToXml($data, $root = true){
+        $str="";
+        if($root)$str .= "<request>";
+        foreach($data as $key => $val){
+            if(is_array($val)){
+                $child = arrayToXml($val, false);
+                $str .= "<$key>$child</$key>";
+            }else{
+                $str.= "<$key>$val</$key>";
+            }
+        }
+        if($root)$str .= "</request>";
+        return $str;
+    }
+}
+
+if (!function_exists('wechatPayArrayToXml')) {
+    /**
+     * 微信 支付 格式 数组 转 xml
+     *
+     * @param $arr
+     *
+     * @return string
+     */
+    function wechatPayArrayToXml ($arr) {
+
+        $xml = "<xml>";
+
+        foreach ($arr as $key=>$val)
+        {
+            if (is_numeric($val)) {
+                $xml.="<".$key.">".$val."</".$key.">";
+            } else {
+                $xml.="<".$key."><![CDATA[".$val."]]></".$key.">";
+            }
+
+        }
+        $xml.="</xml>";
+        return $xml;
+    }
+}
+
+
+
 
 
 

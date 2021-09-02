@@ -205,6 +205,34 @@ composer require szmz/phpmethodextension
   function getDiscount($activityPrice, $marketPrice, $showUnit = false)
   
   
+  
+  /**
+   * 微信 支付 格式 数组 转 xml
+   *
+   * @param $arr
+   *
+   * @return string
+   */
+  function wechatPayArrayToXml ($arr)
+  
+  
+  /**
+   * array to xml
+   * @param $data
+   * @param bool $root
+   * @return string
+   */
+  function arrayToXml($data, $root = true)
+  
+  
+  /**
+   * Xml to Array
+   * @param $xml
+   * @return mixed
+   */
+  function xmlToArray($xml)
+  
+  
 
 ```
 
