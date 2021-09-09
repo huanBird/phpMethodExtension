@@ -232,7 +232,7 @@ composer require szmz/phpmethodextension
    */
   function xmlToArray($xml)
   
-   /**
+  /**
    * 列出目录下的所有文件
    * @param $string
    * @return string
