@@ -232,6 +232,23 @@ composer require szmz/phpmethodextension
    */
   function xmlToArray($xml)
   
+   /**
+   * 列出目录下的所有文件
+   * @param $string
+   * @return string
+   */
+  function listDirFiles($string)
+  
+  
+  /**
+   * 强制下载文件
+   *
+   * @param $string
+   *
+   * @return string
+   */
+  function download($filename){
+  
   
 
 ```
